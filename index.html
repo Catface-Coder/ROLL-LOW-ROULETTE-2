@@ -4,19 +4,365 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lew's Dice Roll</title>
+  <title>ROLL LOW ROULETTE</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1 class="game__title">Roll Dice Game!!!</h1>
+  <h1 class="game__title">Roll Low Roulette!!!</h1>
   <div class="game_section">
     <div class="btn__container">
+      <button class="resetButton">Reset</button>
       <button class="button">Roll</button>
+      <div class="rollCount">0</div>
       <audio id="sound" src="Ice Cubes.mp3" autostart="false" enablejavascript="true"></audio>
     </div>
-    <div class="dice__box">
-        <img class="dice__image" src="images/dice3.png" alt="">
+    <div class="dicegrid">
+      <div class="dice__box">
+          <img class="dice__image1" src="images/dice3.png" alt="">
+      </div>
+      <div class="dice__box">
+        <img class="dice__image2" src="images/dice3.png" alt="">
+      </div>
+      <div class="dice__box">
+        <img class="dice__image3" src="images/dice3.png" alt="">
+      </div>
+      <div class="dice__box">
+        <img class="dice__image4" src="images/dice3.png" alt="">
+      </div>
+      <div class="dice__box">
+        <img class="dice__image5" src="images/dice3.png" alt="">
+      </div>
+      <div class="dice__box">
+        <img class="dice__image6" src="images/dice3.png" alt="">
+      </div>
     </div>
+    <div class="keepgrid">
+      <div class="btn__container">
+        <button class="keep__button roll" id="keep1">Roll</button>
+      </div>
+      <div class="btn__container">
+        <button class="keep__button roll" id="keep2">Roll</button>
+      </div>
+      <div class="btn__container">
+        <button class="keep__button roll" id="keep3">Roll</button>
+      </div>
+      <div class="btn__container">
+        <button class="keep__button roll" id="keep4">Roll</button>
+      </div>
+      <div class="btn__container">
+        <button class="keep__button roll" id="keep5">Roll</button>
+      </div>
+      <div class="btn__container">
+        <button class="keep__button roll" id="keep6">Roll</button>
+      </div>
+    </div>
+    <div class="roulettegrid">
+      <div class="roulette__container">
+        <div class="btn__container">
+          <button class="roulette__button" id="keep6">Spin the Roulette</button>
+        </div>
+      </div>
+      <div class="roulette__box">
+        <p class="roulette__msg">NADA. BETTER LUCK NEXT TIME.</p>
+      </div>
+    </div>
+
+    <div class="scorecardgrid">
+
+      <div class="combotitle">KINDS</div>
+      <div class="player1">
+        <input class="player__input" type="text" placeholder="PLAYER 1">
+      </div>
+      <div class="player2">
+        <input class="player__input" type="text" placeholder="PLAYER 2">
+      </div>
+      <div class="player3">
+        <input class="player__input" type="text" placeholder="PLAYER 3">
+      </div>
+      <div class="player4">
+        <input class="player__input" type="text" placeholder="PLAYER 4">
+      </div>
+      <div class="player5">
+        <input class="player__input" type="text" placeholder="PLAYER 5">
+      </div>
+      <div class="player6">
+        <input class="player__input" type="text" placeholder="PLAYER 6">
+      </div>
+      <div class="ones">ONES</div>
+      <div class="ones1">
+          <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="ones2">
+          <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="ones3">
+          <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="ones4">
+          <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="ones5">
+          <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="ones6">
+          <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="twos">TWOS</div>
+      <div class="twos1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="twos2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="twos3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="twos4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="twos5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="twos6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="threes">THREES</div>
+      <div class="threes1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="threes2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="threes3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="threes4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="threes5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="threes6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fours">FOURS</div>
+      <div class="fours1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fours2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fours3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fours4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fours5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fours6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fives">FIVES</div>
+      <div class="fives1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fives2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fives3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fives4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fives5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="fives6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="sixes">SIXES</div>
+      <div class="sixes1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="sixes2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="sixes3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="sixes4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="sixes5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="sixes6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="odds">ODDS</div>
+      <div class="odds1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="odds2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="odds3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="odds4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="odds5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="odds6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="evens">EVENS</div>
+      <div class="evens1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="evens2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="evens3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="evens4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="evens5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="evens6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="lstrait">LOW STRIGHT</div>
+      <div class="lstrait1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="lstrait2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="lstrait3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="lstrait4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="lstrait5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="lstrait6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="hstrait">HIGH STRIGHT</div>
+      <div class="hstrait1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="hstrait2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="hstrait3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="hstrait4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="hstrait5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="hstrait6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="tripdub">TRIPLE DOUBLE</div>
+      <div class="tripdub1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="tripdub2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="tripdub3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="tripdub4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="tripdub5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="tripdub6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="rollow">ROLL LOW</div>
+      <div class="rollow1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="rollow2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="rollow3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="rollow4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="rollow5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="rollow6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="redo">REDO for TWO</div>
+      <div class="redo1">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="redo2">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="redo3">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="redo4">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="redo5">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+      <div class="redo6">
+        <input class="score__input" type="number" placeholder="Score">
+      </div>
+
+      <div class="total">TOTAL</div>
+      <div class="total1"></div>
+      <div class="total2">
+        <p class="total" placeholder="total"></p>
+      </div>
+      <div class="total3">
+        <p class="total" placeholder="total"></p>
+      </div>
+      <div class="total4">
+        <p class="total" placeholder="total"></p>
+      </div>
+      <div class="total5">
+        <p class="total" placeholder="total"></p>
+      </div>
+      <div class="total6">
+        <p class="total" placeholder="total"></p>
+      </div>
+
+    </div>
+
   </div>
   <script src="app.js"></script>
 </body>

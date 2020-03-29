@@ -1,16 +1,19 @@
+
+
 .game__title {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 30px;
   color: #f37f62;
   position: relative;
+  width: 100%;
 }
 
 .game_section {
-  background: #000000;
+  background: #000;
   margin-top: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   position: absolute;
 }
 
@@ -25,6 +28,30 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.rollCount {
+  background-color: azure;
+  color: red;
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 20px;
+}
+
+.resetButton {
+  background-color: azure;
+  color: red;
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .button:hover {
   color: green;
 }
@@ -32,6 +59,111 @@
 .btn__container {
   margin-top: 15px;
   text-align: center;
+}
+
+.keep__button {
+  background-color: azure;
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.keep__button:hover {
+  color: green;
+}
+
+.roulette__button {
+  grid-area: roulette__button;
+  background-color: rgb(16, 153, 53);
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  justify-self: end;
+}
+
+.roulette__button:hover {
+  color: green;
+}
+
+.roll{
+  color: red;
+}
+.keep{
+  background-color: rgb(77, 10, 10);
+}
+
+.dicegrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1em;
+}
+
+.keepgrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1em;
+  width: 100%;
+}
+
+.roulettegrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+  align-items: center;
+  grid-template-areas: "roulette__container roulette__box";
+  height: 150px;
+}
+
+.scorecardgrid {
+  display: grid;
+  grid-template-columns: 150px repeat(6, minmax(auto, 150px));
+  grid-column-gap: 5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.score__input {
+  background-color:inherit;
+  text-align: center;
+  font-weight: 700;
+}
+
+.scorecardgrid div:nth-child(odd) {
+  background-color: green;
+}
+
+.scorecardgrid div:nth-child(even) {
+  background-color: rgb(10, 73, 34);
+}
+
+.roulette__box{
+  grid-area: roulette__box;
+  justify-self: start;
+  outline: rgb(255, 0, 179);
+}
+
+.roulette__container{
+  grid-area: roulette__container;
+  justify-self: end;
+  outline: rgb(255, 0, 179);
+}
+
+.roulette__msg{
+  color: palevioletred;
+  justify-self: start;
+}
+
+.player__input{
+  background-color:inherit;
+  width: auto;
+  text-align: center;
+  font-weight: 700;
 }
 
 .dice__box {
@@ -54,11 +186,37 @@
   margin: 25% 25%;
 }
 
-.dice__image {
+.dice__image1 {
   height: 100%;
   width: 100%;
 }
 
+.dice__image2 {
+  height: 100%;
+  width: 100%;
+}
+
+.dice__image3 {
+  height: 100%;
+  width: 100%;
+}
+
+.dice__image4 {
+  height: 100%;
+  width: 100%;
+}
+.dice__image5 {
+  height: 100%;
+  width: 100%;
+}
+.dice__image6 {
+  height: 100%;
+  width: 100%;
+}
 .rotate {
   transform: rotate();
+}
+
+.score__input {
+  height: inherit;
 }
